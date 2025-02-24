@@ -49,3 +49,15 @@ p {
   75%  {background-color:green; left:0px; top:200px;}
   100% {background-color:red; left:0px; top:0px;}
 }
+.tableview {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tableview th, .tableview td {
+  padding: 60px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.tableview th {
+  background-color: #222222;
+}
