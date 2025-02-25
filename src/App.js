@@ -142,7 +142,7 @@ function App() {
                 <Nav.Item>
                   <Nav.Link eventKey="education" style={{ color: activeKey === 'education' ? 'orange' : 'white' }}>Education</Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
+                <Nav.Item  className='px-4'>
                   <Nav.Link eventKey="experience" style={{ color: activeKey === 'experience' ? 'orange' : 'white' }}>Experience</Nav.Link>
                 </Nav.Item>
               </Nav>
@@ -183,9 +183,23 @@ function App() {
               )}
 
               {activeKey === 'experience' && (
-                <div>
-                  <h2>Experience Content</h2>
-                  <p>This is some content related to experience.</p>
+                <div className='my-4'>
+                  {/* <p>Skilled in designing scalable state management solutions using Redux, including store configuration, reducers, and middleware. Experienced in optimizing performance with advanced Redux concepts like selectors (Reselect), normalized state, and Redux Thunk for side effects. Proficient in integrating Redux with React components for seamless data flow and improved maintainability. Expertise in client-side routing with React Router, including nested routes, protected routes, and code splitting for performance optimization. Experienced in managing route parameters and implementing navigation guards. Proficient in using core React hooks (useState, useEffect, useContext) for efficient functional components. Strong communication skills and Agile project experience.</p> */}
+                  <ul>
+  <li>Proficient in designing and implementing scalable state management solutions using Redux,including expertise in configuring stores, reducers, and middleware.</li>
+  <li>Skilled in optimizing application performance using advanced Redux concepts such as selectors(Reselect), normalized state structures, and Redux Thunk for managing side effects.</li>
+  <li>Experienced in integrating Redux with React components to enable seamless data flow andimprove application maintainability.</li>
+  <li>Skilled in implementing client-side routing with React Router to build seamless and dynamicsingle-page applications (SPAs).</li>
+  <li>Proficient in managing nested routes, implementing protected routes, and utilizing route-basedcode splitting to optimize application performance.</li>
+  <li>Experienced in handling route parameters and implementing navigation guards to enhance userexperience and ensure application security.</li>
+  <li>Proficient in leveraging core React hooks (e.g., useState, useEffect, useContext) to build dynamicand efficient functional components.</li>
+  <li>Proficient in implementing design systems and component libraries such as Bootstrap orTailwind CSS</li>
+  <li>Excellent Communication skills</li>
+  <li>Attended the daily with development and management team</li>
+  <li>Consistently ensured timely featured delivery in Agile Driven ProjectProficient</li>
+
+
+</ul>  
                 </div>
               )}
             </div>
@@ -193,7 +207,7 @@ function App() {
           </div>
         </div>
 
-        <div id="projects" className="scroll-content" style={{ paddingTop: '60px' }}>
+        <div id="projects" className="scroll-content " style={{ paddingTop: '60px' }}>
 
           <div className='row '>
             <div className='col-lg-9 col-md-12 col-sm-12 col-12' style={{ height: '100vh', textAlign: 'center' }}>
@@ -203,7 +217,7 @@ function App() {
                   <div className="card mx-1 " style={{ background: "#222222" }}>
                     <div className="card-body">
                       <h5 className="card-title" style={{color:"orange"}}><strong>PLAY REVOLUION GAMES</strong></h5>
-                      <p className="card-text text-white">PlayRevolutionGames is an online gaming platform featuring over 100 interactive games. Developed using Unity WebGL, it offers seamless gameplay directly in web browsers without additional plugins. The platform integrates games into a responsive and user-friendly interface, ensuring smooth performance across devices. Built with React and styled with Bootstrap, it provides a mobile-friendly experience. Games range from puzzles to action-packed adventures, catering to a wide audience. The application leverages React-Unity WebGL for flawless integration of Unity games. Players can enjoy a diverse collection of engaging games with minimal loading time. The platform’s goal is to offer a fun, interactive space for users to unwind and challenge themselves. It’s designed for easy navigation, making it simple for users to start playing instantly.</p>
+                      <p className="card-text text-white">Play Revolution Games is an online gaming platform offering a collection of over 100 interactive games, designed to provide users with an engaging experience. The games are developed using Unity WebGL, allowing for seamless integration into the website without the need for additional plugins. Built with React, the platform ensures a dynamic and responsive interface, while Bootstrap is used to guarantee a mobile-friendly design. The website is structured using HTML and styled with CSS for a clean and user-friendly layout. By leveraging react-unity-webgl, the games load efficiently and perform well across different devices. Whether for casual play or long gaming sessions, the site offers an accessible and enjoyable platform. The website can be accessed at <a href="https://www.playrevolutiongames.com" style={{color:"orange"}}  target="_blank" rel="noopener noreferrer">playrevolutiongames.com.</a></p>
 
                     </div>
                   </div>
@@ -212,14 +226,14 @@ function App() {
                   <div className="card mx-1 " style={{ background: "#222222" }}>
                     <div className="card-body">
                       <h5 className="card-title" style={{color:"orange"}}><strong>WINLOTT</strong></h5>
-                      <p className="card-text text-white">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p className="card-text text-white">WinLott is a lottery-based application developed for Win-finity Gaming Private Limited, designed to provide users with an easy way to check lottery results daily. The application allows users to view upcoming lottery ticket advertisements on its interface, offering quick access to the details. Built using React for efficient, dynamic user interactions, the app also uses Bootstrap for responsive design, ensuring a seamless experience across devices. HTML and CSS are employed to structure and style the content. A key feature is the integration of @react-google-maps/api, providing location-based services or maps. This project offers a user-friendly interface for lottery enthusiasts to stay updated on results and upcoming tickets. It ensures accessibility and simplicity with a focus on smooth performance. The website can be accessed at <a href="https://winlott.in" style={{color:"orange"}}  target="_blank" rel="noopener noreferrer">winlott.in.</a></p>
 
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-12 col-sm-12 col-12' style={{ height: '100vh', textAlign: 'center' }}>
+            <div className='col-lg-3 col-md-12 col-sm-12 col-12 px-5' style={{ height: '100vh', textAlign: 'center' }}>
               <h5 style={{ textAlign: "center" }}><strong>Skills</strong></h5>
               <div className='row'>
               {skills.map((skill, item) => (
