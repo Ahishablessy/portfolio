@@ -66,37 +66,37 @@ function App() {
   ];
 
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
+  const [status, setStatus] = useState(null);
+
 
   const onSubmit = (data) => {
-    debugger
-    // Send email to ahisharn@gmail.com
     emailjs.send(
-      'service_hn0acup',  // Service ID from EmailJS
-      'template_i02exqu',  // Template ID from EmailJS
-      // {
-      //   user_email: data.email,  // The email entered by the user
-      //   message: data.message,   // The message entered by the user
-      // },
+      'service_hn0acup',  
+      'template_i02exqu',  
       {
-        from_email: 'febinfebin344@gmail.com',  // Sender's email (static in this case)
-        to_email: 'ahisharn@gmail.com',         // Recipient email (static in this case)
-        message: data.message,                  // The message entered by the user
+        from_name: data.email,
+        to_email: 'ahisharn@gmail.com',  // Add the recipient email
+        message: data.message,                 
       },
-      'tFhDUhAHcj9S8O2lI'  // User ID from EmailJS
+      'tFhDUhAHcj9S8O2lI'  
     )
     .then(
       (response) => {
-        console.log('Email sent successfully:', response);
-        alert('Message sent successfully!');
+        console.log("SUCCESS", response);
+        setStatus("success");
+        reset(); 
       },
       (error) => {
-        console.error('Email sending error:', error);
-        alert('Error sending message!');
+        console.error("Email sending error:", error);
+        setStatus("error");
       }
     );
   };
+  
 
+  
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -544,6 +544,10 @@ function App() {
                   </button>
                 </div>
               </form>
+
+
+            {status === "success" && <p style={{ color: "green", textAlign:"center" }}>Message sent successfully!</p>}
+            {status === "error" && <p style={{ color: "red" , textAlign:"center" }}>Failed to send message. Try again.</p>}
             </div>
           </div>
         </div>
