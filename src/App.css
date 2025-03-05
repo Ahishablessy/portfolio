@@ -129,3 +129,7 @@
 .navbar-toggler-icon {
 background-image: url('./images/menu.png') !important;
 }
+
+.hovering:hover{
+  color: orange;
+}
