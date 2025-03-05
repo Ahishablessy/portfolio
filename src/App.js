@@ -10,6 +10,7 @@ import { IoIosCall, IoMdMail } from "react-icons/io";
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 
+
 function App() {
   // State to control navbar collapse
   const [expanded, setExpanded] = useState(false);
@@ -45,7 +46,7 @@ function App() {
   };
 
   const getmyresume = () => {
-    const pdfPath = '/Ahisha_resume.pdf'; // Adjust path if needed
+    const pdfPath = 'Ahisha_resume.pdf'; // Adjust path if needed
 
     // Create an anchor element for download
     const link = document.createElement('a');
