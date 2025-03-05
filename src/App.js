@@ -182,7 +182,7 @@ function App() {
         <Navbar expand="lg" className=" sticky-top text-white" style={{ background: "black" }} expanded={expanded}>
           <Container fluid>
             {/* Move the Navbar.Brand a little bit to the left */}
-            <Navbar.Brand href="/" className=" ms-xl-5 ms-lg-5 ms-md-0 ms-sm-0 ms-0 ps-xl-5 ps-lg-5 ps-md-4 ps-sm-4 ps-4">
+            <Navbar.Brand href="/portfolio" className=" ms-xl-5 ms-lg-5 ms-md-0 ms-sm-0 ms-0 ps-xl-5 ps-lg-5 ps-md-4 ps-sm-4 ps-4">
             <strong style={{background: "linear-gradient(to top, white, orange)", color: "transparent", backgroundClip: "text"}}>Ahisha Blessy R N</strong>
             </Navbar.Brand>
             <Navbar.Toggle 
