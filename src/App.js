@@ -182,7 +182,7 @@ function App() {
             />
             <Navbar.Collapse id="navbarScroll" >
               <Nav className="ms-auto me-5 pe-5 my-2 my-lg-0" style={{ maxHeight: '165px' }} navbarScroll>
-                <Nav.Link href="/" style={{ color: "white" }}  onMouseEnter={(e) => e.target.style.color = 'orange'} onMouseLeave={(e) => e.target.style.color = 'white'} className=" ps-4" onClick={handleNavLinkClick}>Home</Nav.Link>
+                <Nav.Link href="/portfolio" style={{ color: "white" }}  onMouseEnter={(e) => e.target.style.color = 'orange'} onMouseLeave={(e) => e.target.style.color = 'white'} className=" ps-4" onClick={handleNavLinkClick}>Home</Nav.Link>
                 <Nav.Link href="#about" style={{ color: "white" }}  onMouseEnter={(e) => e.target.style.color = 'orange'} onMouseLeave={(e) => e.target.style.color = 'white'} className=" ps-4" onClick={handleNavLinkClick}>About</Nav.Link>
                 <Nav.Link href="#projects" style={{ color: "white" }}  onMouseEnter={(e) => e.target.style.color = 'orange'} onMouseLeave={(e) => e.target.style.color = 'white'} className=" ps-4" onClick={handleNavLinkClick}>Projects</Nav.Link>
                 <Nav.Link href="#contact" style={{ color: "white" }}  onMouseEnter={(e) => e.target.style.color = 'orange'} onMouseLeave={(e) => e.target.style.color = 'white'} className="ps-4" onClick={handleNavLinkClick}>Contact</Nav.Link>
@@ -193,7 +193,7 @@ function App() {
 
    
 
-<div id="/" className="scroll-content" style={{ paddingTop: "60px" }} >
+<div id="/portfolio" className="scroll-content" style={{ paddingTop: "60px" }} >
   <div className="row px-lg-5 px-md-0 px-sm-0 px-0 mx-lg-5 mx-md-0 mx-sm-0 mx-0">
     
     <div className="col-lg-6 col-md-12 col-sm-12 col-12 d-flex justify-content-center align-items-center" style={{ textAlign: 'start' }}>
