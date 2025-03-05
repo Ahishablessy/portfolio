@@ -6,10 +6,10 @@ import contact from './images/contactgirl.png'
 import Table from 'react-bootstrap/Table';
 // import { FaHtml5 } from "react-icons/fa";
 import { FaHtml5, FaReact, FaCss3Alt, FaJs, FaBootstrap, FaGitAlt } from 'react-icons/fa';
-import { IoIosCall, IoMdMail } from "react-icons/io";
+import { IoIosCall, IoMdMail, IoLogoLinkedin } from "react-icons/io";
+
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
-
 
 function App() {
   // State to control navbar collapse
@@ -55,7 +55,15 @@ function App() {
     link.click();
   }
 
-  // const skills = ['React', 'Html', 'Css', 'Javascript', 'Bootstrap', 'Git']
+  const opentomail = () =>
+  {
+    window.open('mailto:ahisharn@gmail.com')
+  }
+
+  const opentolinkedin = () =>
+  {
+    window.open("https://www.linkedin.com/in/ahisha-blessy-r-n-802a9921a")
+  }
 
   const skills = [
     { icon: <FaReact />, name: 'React' },
@@ -237,7 +245,7 @@ function App() {
                 I’m Ahisha Blessy, a web developer dedicated to creating dynamic, responsive, and user-centric web applications. I focus on delivering innovative solutions that exceed client expectations.
               </p>
               <p className="card-text text-white">
-                I specialize in creating custom web applications that deliver both functionality and exceptional user experiences. Below are two of my featured projects:
+                I specialize in creating custom web applications that deliver both functionality and exceptional user experiences. 
               </p>
             </div>
           </div>
@@ -391,10 +399,17 @@ function App() {
             <IoIosCall style={{ color: 'orange' }} />&nbsp;&nbsp;&nbsp;
             <span>+91-9489404059</span>
           </div>
-          <div className="my-4">
+          <div className="my-4" onClick={opentomail}>
             <IoMdMail style={{ color: 'orange' }} />&nbsp;&nbsp;&nbsp;
             <span>ahisharn@gmail.com</span>
           </div>
+
+          <div className="my-4" onClick={opentolinkedin}>
+            <IoLogoLinkedin style={{ color: 'orange' }} />&nbsp;&nbsp;&nbsp;
+            <span>Visit my linkedin page</span>
+          </div>
+
+        
           <div className="card mx-1 " style={{ background: '#222222' }}>
             <div className="card-body">
               <h5

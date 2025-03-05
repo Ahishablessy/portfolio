@@ -125,3 +125,7 @@
 .small {
   font-size: 200%;
 }
+
+.navbar-toggler-icon {
+background-image: url('./images/menu.png') !important;
+}
