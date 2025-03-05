@@ -397,11 +397,11 @@ function App() {
           </h4>
           <div className="my-4">
             <IoIosCall style={{ color: 'orange' }} />&nbsp;&nbsp;&nbsp;
-            <span>+91-9489404059</span>
+            <span >+91-9489404059</span>
           </div>
           <div className="my-4" onClick={opentomail} style={{cursor:"pointer"}}>
             <IoMdMail style={{ color: 'orange' }} />&nbsp;&nbsp;&nbsp;
-            <span>ahisharn@gmail.com</span>
+            <span className='hovering'>ahisharn@gmail.com</span>
           </div>
 
           <div className="my-4" onClick={opentolinkedin} style={{cursor:"pointer"}}>
