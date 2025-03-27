@@ -3,6 +3,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap';
 import myimage from './images/mee.jpg'
 import myimage1 from './images/mee1.jpg'
 import contact from './images/contactgirl.png'
+import award from './images/awardimage.jpg'
 import Table from 'react-bootstrap/Table';
 // import { FaHtml5 } from "react-icons/fa";
 import { FaHtml5, FaReact, FaCss3Alt, FaJs, FaBootstrap, FaGitAlt } from 'react-icons/fa';
@@ -202,7 +203,7 @@ function App() {
 
    
 
-<div id="/portfolio" className="scroll-content" style={{ paddingTop: "60px" }} >
+<div id="/portfolio" className="scroll-content heightset" style={{ paddingTop: "60px" }} >
   <div className="row px-lg-5 px-md-0 px-sm-0 px-0 mx-lg-5 mx-md-0 mx-sm-0 mx-0">
     
     <div className="col-lg-6 col-md-12 col-sm-12 col-12 d-flex justify-content-center align-items-center" style={{ textAlign: 'start' }}>
@@ -229,7 +230,7 @@ function App() {
 
 <div
       id="about"
-      className={`scroll-content px-lg-5 px-md-5 px-sm-3 px-1 mx-lg-4 mx-md-1 mx-sm-0 mx-0 ${isVisible ? 'slide-up' : ''}`}
+      className={`scroll-content px-lg-5 px-md-5 px-sm-3 px-1 mx-lg-4 mx-md-1 mx-sm-0 mx-0 heightset ${isVisible ? 'slide-up' : ''}`}
       style={{ paddingTop: '60px' }}
     >
       <h3 style={{ textAlign: 'center' }} className=' my-lg-3 my-md-2 my-sm-2 my-2'>
@@ -259,6 +260,9 @@ function App() {
             <Nav.Item className="px-4">
               <Nav.Link eventKey="experience" style={{ color: activeKey === 'experience' ? 'orange' : 'white' }}>Experience</Nav.Link>
             </Nav.Item>
+            <Nav.Item className="">
+              <Nav.Link eventKey="award" style={{ color: activeKey === 'award' ? 'orange' : 'white' }}>Award</Nav.Link>
+            </Nav.Item>
           </Nav>
 
           {activeKey === 'education' && (
@@ -267,6 +271,8 @@ function App() {
                 I finished my 10th grade at Amala Convent Girls Higher Secondary School and continued my higher secondary education at Amala Convent Girls Higher Secondary School. Later, I completed my undergraduate studies at Bethlahem Institute of Engineering
               </p>
               <div className="my-3">
+                <div className='card' style={{background:"#222222"}}>
+                  <div className='card-body'>
                 <Table striped bordered hover size="sm " className="my-4">
                   <thead>
                     <tr>
@@ -293,6 +299,8 @@ function App() {
                     </tr>
                   </tbody>
                 </Table>
+                </div>
+                </div>
               </div>
             </div>
           )}
@@ -316,6 +324,31 @@ function App() {
                   </ul>
             </div>
           )}
+
+{activeKey === 'award' && (
+            <div className={`my-4 ${isVisible ? 'slide-up' : ''}`}>
+           <div className='row'>
+           
+            <div className='col-lg-7 col-md-6 col-sm-12 col-12 ' style={{ }}>
+              <img src={award} style={{width:"100%", height:"auto",boxShadow:"5px 5px 15px #222222", borderRadius:"12px"}}/>
+              </div>
+              
+              <div className='col-lg-5 col-md-6 col-sm-12 col-12'>
+              <div className='card' style={{ background: "#222222" }}>
+              <div className="card-body">
+                <h5 className="text-white underlined" style={{textAlign:"center", fontSize:"19px"}}>Best Employee Award</h5>
+                <p className="card-text text-white my-4" style={{textAlign:"center"}}>
+                Our company awards one outstanding employee each month with the 'Employee of the Month' recognition.
+                </p>
+              <p className="card-text text-white" style={{textAlign:"center"}}>
+              For me, Recipient of 'Best Employee Award' (July 2023) for outstanding performance and dedication, awarded with a cash prize .
+                </p>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -323,7 +356,7 @@ function App() {
 
     <div
       id="projects"
-      className={`scroll-content px-lg-4 px-md-2 px-sm-1 px-1 ${visible ? 'zoom-in-out' : ''} `}
+      className={`scroll-content px-lg-4 px-md-2 px-sm-1 px-1 heightset ${visible ? 'zoom-in-out' : ''} `}
       style={{ paddingTop: '60px' }}
     >
       <h3 style={{ textAlign: 'center' }} className="my-2">
@@ -384,7 +417,7 @@ function App() {
 
         <div
       id="contact"
-      className={`scroll-content ${visibility ? 'zoom-in' : 'zoom-out'}`}  // Using visible instead of isVisible
+      className={`scroll-content heightset ${visibility ? 'zoom-in' : 'zoom-out'}`}  // Using visible instead of isVisible
       style={{ paddingTop: '60px', paddingBottom: '30px' }}
     >
       <h3 style={{ textAlign: 'center' }}>
@@ -410,7 +443,7 @@ function App() {
           </div>
 
         
-          <div className="card mx-1 " style={{ background: '#222222' }}>
+          <div className="card mx-1 my-3" style={{ background: '#222222' }}>
             <div className="card-body">
               <h5
                 className="card-title"
