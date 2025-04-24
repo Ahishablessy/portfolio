@@ -240,15 +240,55 @@ function App() {
       <div className="row">
         <div className="col-lg-5 col-md-12 col-sm-12 col-12 px-lg-5 px-md-5 px-sm-3 px-3 my-lg-5 my-md-0 my-sm-0 my-0" style={{ textAlign: 'center' }}>
           <div className={`card ${isVisible ? 'slide-up' : ''}`} style={{ background: "#222222" }}>
-            <img className="card-img-top" src={myimage1} alt="Card image cap" />
+            {/* <img className="card-img-top" src={myimage1} alt="Card image cap" /> */}
             <div className="card-body">
               <p className="card-text text-white">
                 I’m Ahisha Blessy, a web developer dedicated to creating dynamic, responsive, and user-centric web applications. I focus on delivering innovative solutions that exceed client expectations.
               </p>
               <p className="card-text text-white">
-                I specialize in creating custom web applications that deliver both functionality and exceptional user experiences. 
+                 I specialize in creating custom web applications that deliver both functionality and exceptional user experiences. 
               </p>
             </div>
+          </div>
+
+          <div className="row">
+            <h5 style={{ textAlign: 'center', color: 'orange' }} className='mt-4 pb-2'>
+              <strong>Skills</strong>
+            </h5>
+            {/* Assuming skills array exists */}
+            {/* {skills.map((skill, item) => (
+              <div key={item} className="col-lg-6 col-md-2 col-sm-6 col-6 my-lg-1 my-md-2 my-sm-2 my-2">
+                <div style={{  background: '#222222', borderRadius: '6px' }} className='d-flex align-items-center justify-content-center'>
+                  <span style={{ color: 'orange', fontSize: '35px' }} className='pb-2'>
+                    <strong>{skill.icon} </strong>
+                  </span>
+                  <span style={{ color: 'white' }}>
+                    <strong> {skill.name}</strong>
+                  </span>
+                </div>
+              </div>
+            ))} */}
+            {skills.map((skill, item) => (
+  <div key={item} className="col-lg-6 col-md-4 col-sm-6 col-6 my-lg-1 my-md-2 my-sm-2 my-2 ">
+    <div 
+      style={{ background: '#222222', borderRadius: '6px' }} 
+    >
+      <div className='row'>
+        <div className='col-5 ' style={{textAlign:"end"}}>
+      <span style={{ color: 'orange', fontSize: '35px'}}>
+        <strong>{skill.icon}</strong>
+      </span>
+      </div>
+      <div className='col-7 pt-3' style={{textAlign:"start"}}>
+      <span style={{ color: 'white' }}>
+        <strong>{skill.name}</strong>
+      </span>
+      </div>
+      </div>
+    </div>
+  </div>
+))}
+
           </div>
         </div>
 
@@ -308,17 +348,13 @@ function App() {
           {activeKey === 'experience' && (
             <div className={`my-4 ${isVisible ? 'slide-up' : ''}`}>
              <ul>
-                    <li>Proficient in designing and implementing scalable state management solutions using Redux,including expertise in configuring stores, reducers, and middleware.</li>
-                    <li>Skilled in optimizing application performance using advanced Redux concepts such as selectors(Reselect), normalized state structures, and Redux Thunk for managing side effects.</li>
-                    <li>Experienced in integrating Redux with React components to enable seamless data flow andimprove application maintainability.</li>
-                    <li>Skilled in implementing client-side routing with React Router to build seamless and dynamicsingle-page applications (SPAs).</li>
-                    <li>Proficient in managing nested routes, implementing protected routes, and utilizing route-basedcode splitting to optimize application performance.</li>
-                    <li>Experienced in handling route parameters and implementing navigation guards to enhance userexperience and ensure application security.</li>
-                    <li>Proficient in leveraging core React hooks (e.g., useState, useEffect, useContext) to build dynamicand efficient functional components.</li>
-                    <li>Proficient in implementing design systems and component libraries such as Bootstrap orTailwind CSS</li>
-                    <li>Excellent Communication skills</li>
-                    <li>Attended the daily with development and management team</li>
-                    <li>Consistently ensured timely featured delivery in Agile Driven ProjectProficient</li>
+                    <li>Proficient in scalable Redux architecture using slices, middleware, Reselect, normalized state, and Redux Thunk for side effects.</li>
+                    <li>Experienced in integrating Redux with React for seamless data flow, maintainable codebases, and optimized component performance.</li>
+                    <li>Proficient in implementing client-side routing using React Router for building seamless single-page applications (SPAs).</li>
+                    <li>Proficient in using React hooks (useState, useEffect, useContext) to build dynamic and efficient functional components.</li>
+                    <li>Experienced in using design systems like Bootstrap and media queries to build responsive and consistent user interfaces.</li>
+                    <li>Strong communication skills; actively participated in daily stand-ups and ensured timely feature delivery in Agile-driven environments.</li>
+                   
 
 
                   </ul>
@@ -363,21 +399,21 @@ function App() {
         <strong className='underlined small'>Projects</strong>
       </h3>
       <div className="row px-lg-5 px-md-2 px-sm-0 px-0 mx-lg-4 mx-md-1 mx-sm-0 mx-0 my-4">
-        <div className="col-lg-9 col-md-12 col-sm-12 col-12" style={{ textAlign: 'center' }}>
+        <div className="col-lg-12 col-md-12 col-sm-12 col-12" style={{ textAlign: 'center' }}>
           <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12 my-lg-0 my-md-1 my-sm-1 my-1">
+            <div className="col-lg-4 col-md-4 col-sm-12 col-12 my-lg-0 my-md-1 my-sm-1 my-1">
               <div className="card" style={{ background: '#222222' }}>
                 <div className="card-body">
                   <h5 className="card-title" style={{ color: 'orange' }}>
                     <strong>PLAY REVOLUTION GAMES</strong>
                   </h5>
                   <p className="card-text text-white">
-                  Play Revolution Games is an online gaming platform offering a collection of over 100 interactive games, designed to provide users with an engaging experience. The games are developed using Unity WebGL, allowing for seamless integration into the website without the need for additional plugins. Built with React, the platform ensures a dynamic and responsive interface, while Bootstrap is used to guarantee a mobile-friendly design. The website is structured using HTML and styled with CSS for a clean and user-friendly layout. By leveraging react-unity-webgl, the games load efficiently and perform well across different devices. Whether for casual play or long gaming sessions, the site offers an accessible and enjoyable platform. The website can be accessed at <a href="https://www.playrevolutiongames.com" style={{ color: "orange" }} target="_blank" rel="noopener noreferrer">playrevolutiongames.com.</a>
+                  Play Revolution Games is an online gaming platform offering a collection of over 100 interactive games, designed to provide users with an engaging experience. The games are developed using Unity WebGL, allowing for seamless integration into the website without the need for additional plugins. Built with React, the platform ensures a dynamic and responsive interface, while Bootstrap is used to guarantee a mobile-friendly design. The website is structured using HTML and styled with CSS for a clean and user-friendly layout. By leveraging react-unity-webgl, the games perform well across different devices. Whether for casual play or long gaming sessions, the site offers an accessible and enjoyable platform. The website can be accessed at <a href="https://www.playrevolutiongames.com" style={{ color: "orange" }} target="_blank" rel="noopener noreferrer">playrevolutiongames.com.</a>
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12 my-lg-0 my-md-1 my-sm-1 my-1">
+            <div className="col-lg-4 col-md-4 col-sm-12 col-12 my-lg-0 my-md-1 my-sm-1 my-1">
               <div className="card" style={{ background: '#222222' }}>
                 <div className="card-body">
                   <h5 className="card-title" style={{ color: 'orange' }}>
@@ -389,14 +425,24 @@ function App() {
                 </div>
               </div>
             </div>
+            <div className="col-lg-4 col-md-4 col-sm-12 col-12 my-lg-0 my-md-1 my-sm-1 my-1">
+              <div className="card" style={{ background: '#222222' }}>
+                <div className="card-body">
+                  <h5 className="card-title" style={{ color: 'orange' }}>
+                    <strong>QRDIN</strong>
+                  </h5>
+                  <p className="card-text text-white">
+                  I was responsible for developing the admin panel of a QR-based food ordering platform. Users scan QR codes placed on tables to access digital menus and place orders seamlessly. I implemented backend integration to dynamically generate QR codes and enabled downloading and storing them on the frontend. Scanning the QR redirects users to the menu page, where orders placed are reflected in real time on the dashboard. I used Redux Toolkit and RTK Query for efficient state management and API handling. All API requests were secured using JWT authentication. The platform is deployed on Vercel for smooth performance and scalability.The admin panel can be accessed at <a href="https://qrdin-adminpanel1.vercel.app/" style={{ color: "orange" }} target="_blank" rel="noopener noreferrer"> qrdin-adminpanel</a> and an example QR redirect link is <a href=" https://qrdinn.github.io/Qrdinn/#/userid/26024d74-1007-4ab1-a68e-b5c7d1056f7a/tableid/1" style={{ color: "orange" }} target="_blank" rel="noopener noreferrer">click here.</a>
+                                   </p>                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-12 col-sm-12 col-12 my-lg-0 my-md-1 my-sm-1 my-1" style={{ textAlign: 'center' }}>
+        {/* <div className="col-lg-3 col-md-12 col-sm-12 col-12 my-lg-0 my-md-1 my-sm-1 my-1" style={{ textAlign: 'center' }}>
           <div className="row">
             <h5 style={{ textAlign: 'center', color: 'orange' }}>
               <strong>Skills</strong>
             </h5>
-            {/* Assuming skills array exists */}
             {skills.map((skill, item) => (
               <div key={item} className="col-lg-6 col-md-2 col-sm-6 col-6 my-lg-1 my-md-2 my-sm-2 my-2">
                 <div style={{ background: '#222222', borderRadius: '6px' }} className="py-2">
@@ -410,7 +456,7 @@ function App() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
 
