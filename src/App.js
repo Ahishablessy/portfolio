@@ -464,7 +464,7 @@ function App() {
         <div
       id="contact"
       className={`scroll-content heightset ${visibility ? 'zoom-in' : 'zoom-out'}`}  // Using visible instead of isVisible
-      style={{ paddingTop: '60px', paddingBottom: '30px' }}
+      style={{ paddingTop: '120px', paddingBottom: '30px' }}
     >
       <h3 style={{ textAlign: 'center' }}>
         <strong className='underlined small'>Contact</strong>
